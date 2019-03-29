@@ -1,0 +1,37 @@
+.DashboardPage {
+    min-width: 240px;
+    position: absolute;
+    left: 50%;
+    top: 26%;
+    transform: translateX(-50%);
+    p.title {
+        text-align: center;
+        font-size: 24px;
+        color: #999
+    }
+    p.subTitle {
+        color: #aaa;
+        font-size: 16px;
+        text-align: center;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: 0 auto 45px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 15px #fff;
+        animation: colorfulShadow 3.5s infinite linear;
+    }
+    @keyframes colorfulShadow {
+        0% {
+            box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8)
+        }
+        50% {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2)
+        }
+        100% {
+            box-shadow: 0 2px 20px rgba(255, 255, 255, 0.8)
+        }
+    }
+}

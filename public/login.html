@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Menusifu Cloud Configuration</title>
+    <script src="./axios.min.js"></script>
+    <script src="./storage.js"></script>
+</head>
+
+<body>
+    <div class="loginCon">
+        <div class="logo">MENUSIFU</div>
+        <p style="text-align:center;line-height:120px;">
+            <span>测试用户：</span>
+            <select id="user" style="width:180px;line-height:30px;height:30px;">
+                <option value="M000005104">用户1</option>
+                <option value="M000006853">用户2</option>
+                <option value="M000002222">用户3</option>
+            </select>
+        </p>
+        <div class="loginBtn" id="loginBtn">登陆</div>
+    </div>
+    <script>
+    document.getElementById("loginBtn").onclick = function() {
+        // var username = document.getElementById("username").value;
+        // var password = document.getElementById("password").value;
+        // axios.post('/login', {
+        //     username: username,
+        //     password: password
+        // }).then(function(response) {
+        //     window.storage.setItem("token",response.token)
+        //     window.location = window.location.origin
+        // })
+        // .catch(function(error) {
+        //     console.log(error);
+        // });
+        window.storage.setItem("token",document.getElementById("user").value)
+        window.location = window.location.origin
+    }
+    </script>
+</body>
+
+</html>
